@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="album_cell" id="1r7-xw-Gpy" customClass="AMAlbumCell" customModule="AMusic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="194" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="194" height="256"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="livetune" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1p-lb-lc2" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                        <rect key="frame" x="0.0" y="202" width="194" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Vfb-BO-luq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="Skl-9J-tjj">
+                        <rect key="frame" x="-5" y="-5" width="204" height="204"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Skl-9J-tjj" secondAttribute="height" multiplier="1:1" id="NQB-q7-J5x"/>
+                        </constraints>
+                    </imageView>
+                    <view hidden="YES" tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHf-dO-O4Z" customClass="IBView" customModule="AMusic" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="194" height="194"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rHf-dO-O4Z" secondAttribute="height" multiplier="1:1" id="2Tx-Ox-PVf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XRO-jU-D0e"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4枚のアルバム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUE-be-HNu">
+                        <rect key="frame" x="0.0" y="227" width="194" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Kcn-Q1-jex"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="V1p-lb-lc2" firstAttribute="leading" secondItem="1r7-xw-Gpy" secondAttribute="leading" id="59v-xb-w1T"/>
+                <constraint firstItem="kUE-be-HNu" firstAttribute="leading" secondItem="1r7-xw-Gpy" secondAttribute="leading" id="BEU-MV-7eD"/>
+                <constraint firstItem="kUE-be-HNu" firstAttribute="centerX" secondItem="1r7-xw-Gpy" secondAttribute="centerX" id="ESS-AT-8gs"/>
+                <constraint firstItem="rHf-dO-O4Z" firstAttribute="top" secondItem="1r7-xw-Gpy" secondAttribute="top" id="KeA-ge-JSe"/>
+                <constraint firstItem="V1p-lb-lc2" firstAttribute="centerX" secondItem="1r7-xw-Gpy" secondAttribute="centerX" id="OWw-UR-kSb"/>
+                <constraint firstItem="kUE-be-HNu" firstAttribute="top" secondItem="V1p-lb-lc2" secondAttribute="bottom" constant="4" id="hEH-Bj-kBZ"/>
+                <constraint firstAttribute="trailing" secondItem="Skl-9J-tjj" secondAttribute="trailing" constant="-5" id="ia8-Uk-Qkk"/>
+                <constraint firstAttribute="trailing" secondItem="rHf-dO-O4Z" secondAttribute="trailing" id="jVt-az-mAb"/>
+                <constraint firstItem="Skl-9J-tjj" firstAttribute="leading" secondItem="1r7-xw-Gpy" secondAttribute="leading" constant="-5" id="kVr-ip-V8t"/>
+                <constraint firstItem="rHf-dO-O4Z" firstAttribute="leading" secondItem="1r7-xw-Gpy" secondAttribute="leading" id="kgw-rG-UCF"/>
+                <constraint firstItem="Skl-9J-tjj" firstAttribute="top" secondItem="1r7-xw-Gpy" secondAttribute="top" constant="-5" id="nbn-Uj-3sr"/>
+                <constraint firstItem="V1p-lb-lc2" firstAttribute="top" secondItem="Skl-9J-tjj" secondAttribute="bottom" constant="3" id="uDt-Zw-uBE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="01o-EG-uIi"/>
+            <size key="customSize" width="194" height="257"/>
+            <point key="canvasLocation" x="-310" y="121"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cover" width="250" height="250"/>
+    </resources>
+</document>

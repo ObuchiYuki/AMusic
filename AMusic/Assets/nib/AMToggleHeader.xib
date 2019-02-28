@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="HzH-W1-r5g" customClass="AMToggleHeader" customModule="AMusic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aqC-mg-ec1">
+                    <rect key="frame" x="16" y="8" width="343" height="34"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-Ta-dig" customClass="AMGradationButton" customModule="AMusic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="Lv9-B2-wEb"/>
+                            </constraints>
+                            <state key="normal" title="再生">
+                                <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="_isLineType" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didPlayButtonPush:" destination="HzH-W1-r5g" eventType="touchUpInside" id="Rhw-t4-Tkw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLD-Jp-h3I" customClass="AMGradationButton" customModule="AMusic" customModuleProvider="target">
+                            <rect key="frame" x="193" y="0.0" width="150" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="5xq-vX-CTJ"/>
+                            </constraints>
+                            <state key="normal" title="シャッフル">
+                                <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="_isLineType" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didShuffleButtonPush:" destination="HzH-W1-r5g" eventType="touchUpInside" id="kLW-Ip-k9x"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ReS-Ta-dig" firstAttribute="leading" secondItem="aqC-mg-ec1" secondAttribute="leading" id="Kbx-8p-FVh"/>
+                        <constraint firstAttribute="trailing" secondItem="rLD-Jp-h3I" secondAttribute="trailing" id="zbZ-kl-sri"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="8O4-vv-zXH" firstAttribute="trailing" secondItem="aqC-mg-ec1" secondAttribute="trailing" constant="16" id="SfE-OS-9F2"/>
+                <constraint firstItem="aqC-mg-ec1" firstAttribute="top" secondItem="8O4-vv-zXH" secondAttribute="top" constant="8" id="m5S-IO-ZAc"/>
+                <constraint firstItem="aqC-mg-ec1" firstAttribute="centerY" secondItem="HzH-W1-r5g" secondAttribute="centerY" id="ozc-Hh-o7t"/>
+                <constraint firstItem="aqC-mg-ec1" firstAttribute="leading" secondItem="8O4-vv-zXH" secondAttribute="leading" constant="16" id="qlb-mz-9yk"/>
+                <constraint firstItem="8O4-vv-zXH" firstAttribute="bottom" secondItem="aqC-mg-ec1" secondAttribute="bottom" constant="8" id="wxF-wH-OXo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="8O4-vv-zXH"/>
+            <connections>
+                <outlet property="buttonWidth1" destination="Lv9-B2-wEb" id="knc-Tm-eWo"/>
+                <outlet property="buttonWidth2" destination="5xq-vX-CTJ" id="m37-id-8tf"/>
+                <outlet property="stackView" destination="aqC-mg-ec1" id="ry1-dg-95G"/>
+            </connections>
+            <point key="canvasLocation" x="-220.5" y="840"/>
+        </collectionReusableView>
+    </objects>
+</document>

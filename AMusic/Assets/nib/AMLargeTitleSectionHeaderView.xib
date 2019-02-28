@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AMLargeTitleSectionHeaderView" customModule="AMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="xNC-l4-o5P" id="b8f-4c-J51"/>
+                <outlet property="titleLabel" destination="UBV-se-Zed" id="9Tm-GE-tJi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検索履歴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBV-se-Zed">
+                    <rect key="frame" x="20" y="15" width="93.5" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNC-l4-o5P">
+                    <rect key="frame" x="322" y="17" width="33" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <state key="normal" title="削除">
+                        <color key="titleColor" red="0.92098408939999998" green="0.37037920949999997" blue="0.23912948370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="actionButtonDidPush:" destination="-1" eventType="touchUpInside" id="lWD-sU-fgY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xNC-l4-o5P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="9GL-pd-IdF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UBV-se-Zed" secondAttribute="bottom" constant="15" id="LVt-mR-llb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xNC-l4-o5P" secondAttribute="trailing" constant="20" id="RY0-wn-3hE"/>
+                <constraint firstItem="UBV-se-Zed" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="aZy-0t-ZPF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xNC-l4-o5P" secondAttribute="bottom" constant="17" id="iEq-3x-DGV"/>
+                <constraint firstItem="UBV-se-Zed" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="m9e-AD-FoN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="355"/>
+        </view>
+    </objects>
+</document>

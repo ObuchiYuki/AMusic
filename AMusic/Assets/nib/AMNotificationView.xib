@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AMNotificationView" customModule="AMusic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYf-hf-uqK" customClass="IBView" customModule="AMusic" customModuleProvider="target">
+                    <rect key="frame" x="8" y="20" width="359" height="57"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oQ1-EA-sK6">
+                            <rect key="frame" x="8" y="8" width="343" height="41"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="vk3-1l-B5Y" customClass="IBImageView" customModule="AMusic" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="vk3-1l-B5Y" secondAttribute="height" multiplier="1:1" id="ABJ-Pb-euB"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-wv-Art">
+                                    <rect key="frame" x="57" y="1.5" width="180" height="38"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ダウンロード完了" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXS-no-xbv" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell Your World【EP】- Youtube" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRH-6X-b8d" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                            <rect key="frame" x="0.0" y="23.5" width="180" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuq-5m-Rzu">
+                                    <rect key="frame" x="313" y="0.0" width="30" height="41"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <state key="normal" title="×">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="closeButtonDidPush:" destination="iN0-l3-epB" eventType="touchUpInside" id="Gde-Z8-P6F"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="6bQ-0V-jE9"/>
+                                <constraint firstItem="2SL-wv-Art" firstAttribute="leading" secondItem="vk3-1l-B5Y" secondAttribute="trailing" constant="16" id="ell-xH-UaZ"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92496854070000001" green="0.35689121480000002" blue="0.40389496089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="oQ1-EA-sK6" secondAttribute="bottom" constant="8" id="2h8-wH-TY2"/>
+                        <constraint firstItem="oQ1-EA-sK6" firstAttribute="top" secondItem="vYf-hf-uqK" secondAttribute="top" constant="8" id="798-oF-yJR"/>
+                        <constraint firstAttribute="height" constant="57" id="IpA-xK-dm7"/>
+                        <constraint firstItem="oQ1-EA-sK6" firstAttribute="leading" secondItem="vYf-hf-uqK" secondAttribute="leading" constant="8" id="etr-U8-e6m"/>
+                        <constraint firstAttribute="trailing" secondItem="oQ1-EA-sK6" secondAttribute="trailing" constant="8" id="hvb-yY-xJs"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.29999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vYf-hf-uqK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="3LD-1J-EWZ"/>
+                <constraint firstItem="vYf-hf-uqK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="5Nf-W7-dXh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vYf-hf-uqK" secondAttribute="trailing" constant="8" id="bQ5-w6-IJO"/>
+                <constraint firstItem="vYf-hf-uqK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="iTx-7y-bhD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="vk3-1l-B5Y" id="Maa-zP-mMy"/>
+                <outlet property="subTitleLabel" destination="SRH-6X-b8d" id="IDs-sq-ok3"/>
+                <outlet property="titleLabel" destination="rXS-no-xbv" id="UCh-mb-ZSO"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="348.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cover" width="250" height="250"/>
+    </resources>
+</document>

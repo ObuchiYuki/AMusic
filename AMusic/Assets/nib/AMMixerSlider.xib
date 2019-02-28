@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AMMixerSlider" customModule="AMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="z21-bL-Qge" id="f5b-W1-w8J"/>
+                <outlet property="progressView" destination="ZeW-OV-Uc9" id="b5e-Mi-7P9"/>
+                <outlet property="topLabel" destination="Qcv-bL-F6Q" id="4jl-6a-z9T"/>
+                <outlet property="underLabel" destination="3G5-8F-2cC" id="bEC-0F-g8Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z21-bL-Qge" customClass="IBView" customModule="AMusic" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="453" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.47" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-8F-2cC">
+                            <rect key="frame" x="76.5" y="26" width="300" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="h90-sp-kN7"/>
+                                <constraint firstAttribute="width" constant="300" id="owo-gX-1YD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="33"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-OV-Uc9" customClass="AMGradationView" customModule="AMusic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="453" height="100"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcv-bL-F6Q">
+                                    <rect key="frame" x="76.5" y="26" width="300" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="KGE-iu-1G6"/>
+                                        <constraint firstAttribute="width" constant="300" id="yjA-Vy-qgZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="33"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Qcv-bL-F6Q" firstAttribute="centerX" secondItem="ZeW-OV-Uc9" secondAttribute="centerX" id="5Nf-fY-567"/>
+                                <constraint firstItem="Qcv-bL-F6Q" firstAttribute="centerY" secondItem="ZeW-OV-Uc9" secondAttribute="centerY" id="IJI-wN-RPk"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="horizontal" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="0.20008389260000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ZeW-OV-Uc9" secondAttribute="trailing" id="G3D-37-Lzs"/>
+                        <constraint firstItem="3G5-8F-2cC" firstAttribute="centerX" secondItem="z21-bL-Qge" secondAttribute="centerX" id="mny-GD-ipa"/>
+                        <constraint firstItem="ZeW-OV-Uc9" firstAttribute="top" secondItem="z21-bL-Qge" secondAttribute="top" id="oYd-zz-66p"/>
+                        <constraint firstItem="ZeW-OV-Uc9" firstAttribute="leading" secondItem="z21-bL-Qge" secondAttribute="leading" id="tPW-8I-cOh"/>
+                        <constraint firstItem="3G5-8F-2cC" firstAttribute="centerY" secondItem="z21-bL-Qge" secondAttribute="centerY" id="uya-Mz-hmd"/>
+                        <constraint firstAttribute="bottom" secondItem="ZeW-OV-Uc9" secondAttribute="bottom" id="wqJ-x1-rOa"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="z21-bL-Qge" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8jF-0t-vEv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="z21-bL-Qge" secondAttribute="bottom" id="JrN-ez-ViZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z21-bL-Qge" secondAttribute="trailing" id="QAl-b3-w3P"/>
+                <constraint firstItem="z21-bL-Qge" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bSB-fu-bpd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="72.5" y="337"/>
+        </view>
+    </objects>
+</document>
